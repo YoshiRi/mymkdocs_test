@@ -1,0 +1,34 @@
+site_name: My Docs
+# Template from https://taxintt.hatenablog.com/entry/2020/06/07/225215
+# materialのテーマを使用
+theme:
+  name: material
+  language: ja
+  features:
+    - tabs
+  palette:
+    primary: indigo
+    accent: indigo
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - meta
+  - admonition
+  #- math
+  #- plantuml_markdown: # platnumlを書ける
+      #server: http://www.planturl.com/planturl
+extra:
+  search:
+    language: 'ja'
+plugins:
+  - search # デフォルトだが一応明示的に
+  #- git-revision-date-localized   # 更新時を表示可能
+
+# ファイル構成
+## docs 以下ならどこでもOK？要調査
+nav:
+  - Home:
+    - Top: index.md
+  - Chapters:
+    - Chapter1: equation_test.md
+    - Chapter2: chapter2.md
