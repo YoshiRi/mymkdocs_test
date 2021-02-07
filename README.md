@@ -27,3 +27,13 @@ docker run -it --entrypoint="/bin/ash" squidfunk/mkdocs-material
 
 [ここの記述](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)を参考にワークフローを定義。
 
+- MathJaxを追加
+  - 没：https://squidfunk.github.io/mkdocs-material/reference/mathjax/
+  - 採用：https://qiita.com/mebiusbox2/items/a61d42878266af969e3c
+
+
+## troubleshoot
+
+Config value: 'markdown_extensions'. Error: Invalid Markdown Extensions configuration
+
+インデントのエラーくさい。

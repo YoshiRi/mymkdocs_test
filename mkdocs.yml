@@ -1,5 +1,7 @@
+# Borrowed From https://taxintt.hatenablog.com/entry/2020/06/07/225215
+
 site_name: My Docs
-# Template from https://taxintt.hatenablog.com/entry/2020/06/07/225215
+
 # materialのテーマを使用
 theme:
   name: material
@@ -9,14 +11,22 @@ theme:
   palette:
     primary: indigo
     accent: indigo
+
+# 拡張設定
 markdown_extensions:
   - codehilite
   - footnotes
   - meta
   - admonition
-  #- math
-  #- plantuml_markdown: # platnumlを書ける
-      #server: http://www.planturl.com/planturl
+  - mdx_math: # Write math
+      enable_dollar_delimiter: true 
+  - plantuml_markdown: # platnumlを書ける
+      server: http://www.plantuml.com/plantuml
+      format: svg
+# mathjax Settings
+extra_javascript: 
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
 extra:
   search:
     language: 'ja'
@@ -24,11 +34,13 @@ plugins:
   - search # デフォルトだが一応明示的に
   #- git-revision-date-localized   # 更新時を表示可能
 
+
 # ファイル構成
 ## docs 以下ならどこでもOK？要調査
 nav:
   - Home:
     - Top: index.md
   - Chapters:
-    - Chapter1: equation_test.md
-    - Chapter2: chapter2.md
+    - EquationTest: equation_test.md
+    - AdmonitionTest: admonition_test.md
+    - PlantUMLTest: uml_test.md
