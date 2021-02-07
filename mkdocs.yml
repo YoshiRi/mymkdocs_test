@@ -18,15 +18,19 @@ markdown_extensions:
   - footnotes
   - meta
   - admonition
-  - mdx_math: # Write math
-      enable_dollar_delimiter: true 
+  #- mdx_math: # Write math
+  #    enable_dollar_delimiter: true 
+  - pymdownx.arithmatex:
+      generic: true 
   - plantuml_markdown: # platnumlを書ける
       server: http://www.plantuml.com/plantuml
       format: svg
 # mathjax Settings
 extra_javascript: 
-  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
+  #- http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra:
   search:
     language: 'ja'
