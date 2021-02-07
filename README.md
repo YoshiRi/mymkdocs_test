@@ -1,5 +1,9 @@
 # Mkdocsでドキュメントを作る
 
+以下メモ。
+
+
+## Docker環境版
 Dockerで作る。
 
 ただし，数式とかPlantumlとかはダメそう。
@@ -15,4 +19,11 @@ pipできなかったので[ここを参照](https://yukituna.com/2764/)
 ashに入る。一応，ash add bashでもbashが使えるようになる。
 
 docker run -it --entrypoint="/bin/ash" squidfunk/mkdocs-material
+
+
+うーん，DockerFile書いたほうが良さそう。
+
+## GitHub Actions
+
+[ここの記述](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)を参考にワークフローを定義。
 

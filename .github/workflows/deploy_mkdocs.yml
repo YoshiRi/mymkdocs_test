@@ -1,0 +1,23 @@
+name: deploy mkdocs
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check out code
+        uses: actions/checkout@v2
+      # Prepare Python package
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material
+      - run: pip install plantuml-markdown python-markdown-math
+      # deploy
+      - run: mkdocs gh-deploy --force
+
