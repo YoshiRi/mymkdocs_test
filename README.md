@@ -30,10 +30,15 @@ docker run -it --entrypoint="/bin/ash" squidfunk/mkdocs-material
 - MathJaxを追加
   - 没：https://squidfunk.github.io/mkdocs-material/reference/mathjax/
   - 採用：https://qiita.com/mebiusbox2/items/a61d42878266af969e3c
-
+- PDF化
+  - 複数あるがこちらを使用。https://comwes.github.io/mkpdfs-mkdocs-plugin/pdf/documentation.pdf
+- 
 
 ## troubleshoot
 
 Config value: 'markdown_extensions'. Error: Invalid Markdown Extensions configuration
 
-インデントのエラーくさい。
+この手のはインデントのエラーくさい。
+
+Dockerでplantumlのサーバーにアクセスできない。だるい。
+

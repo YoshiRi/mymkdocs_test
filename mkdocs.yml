@@ -36,6 +36,9 @@ extra:
     language: 'ja'
 plugins:
   - search # デフォルトだが一応明示的に
+  - mkpdfs:
+      company: Github Actions
+      author: Ossyaritoori
   #- git-revision-date-localized   # 更新時を表示可能
 
 

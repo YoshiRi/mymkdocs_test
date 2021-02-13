@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: pip install plantuml-markdown python-markdown-math
+      - run: pip install plantuml-markdown python-markdown-math mkpdfs-mkdocs
       # deploy
       - run: mkdocs gh-deploy --force
 
