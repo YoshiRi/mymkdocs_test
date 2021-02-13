@@ -32,7 +32,7 @@ docker run -it --entrypoint="/bin/ash" squidfunk/mkdocs-material
   - 採用：https://qiita.com/mebiusbox2/items/a61d42878266af969e3c
 - PDF化
   - 複数あるがこちらを使用。https://comwes.github.io/mkpdfs-mkdocs-plugin/pdf/documentation.pdf
-- 
+  - エラーが出るのでv1.1以降を指定する。 https://github.com/comwes/mkpdfs-mkdocs-plugin/pull/15
 
 ## troubleshoot
 
