@@ -1,5 +1,4 @@
-# Borrowed From https://taxintt.hatenablog.com/entry/2020/06/07/225215
-
+# サイト名
 site_name: My Docs
 
 # materialのテーマを使用
@@ -7,7 +6,9 @@ theme:
   name: material
   language: ja
   features:
-    - tabs
+    - navigation.tabs # navigationをタブでも表示
+    - navigation.tabs.sticky # タブの固定（今はInsiderのみ）
+    #- toc.integrate # TOCを左にIntegrate，Numberingと噛み合わないので無効化
   palette:
     primary: indigo
     accent: indigo
@@ -18,13 +19,13 @@ markdown_extensions:
   - footnotes
   - meta
   - admonition
-  #- mdx_math: # Write math
-  #    enable_dollar_delimiter: true 
-  - pymdownx.arithmatex:
+  - pymdownx.arithmatex: # Mathjaxの数式有効化
       generic: true 
   - plantuml_markdown: # platnumlを書ける
       server: http://www.plantuml.com/plantuml
       format: svg
+  - mdx_truly_sane_lists: #list indentation  
+      nested_indent: 2 
 # mathjax Settings
 extra_javascript: 
   #- http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
@@ -36,7 +37,13 @@ extra:
     language: 'ja'
 plugins:
   - search # デフォルトだが一応明示的に
-  #- git-revision-date-localized   # 更新時を表示可能
+  - add-number: # 章に番号を振る
+      increment_topnav: True # 章
+      increment_pages: True # 節（各ページにも振る）
+      strict_mode: False
+  - git-revision-date-localized   # 更新時を表示可能
+
+use_directory_urls: false # directly connect htmls
 
 
 # ファイル構成
